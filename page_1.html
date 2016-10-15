@@ -4,9 +4,34 @@
 }
 </style>
 <div class="loadPage">
+		<div class="form-group col-md-4">
+			<label for="usr">Filter 1:</label>
+		  	<input type="text" class="form-control" id="usr" ng-model="filter1" name="filter1">
+		</div>
+		<div class="form-group col-md-4">
+		  <label for="pwd">Filter 2:</label>
+		  <input type="text" class="form-control" id="pwd" ng-model="filter2" name="filter2">
+		</div>
+		<div class="form-group col-md-4">
+		  <label for="pwd">Filter 3:</label>
+		  <input type="text" class="form-control" id="pwd" ng-model="filter3" name="filter3">
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-3" ng-repeat="x in products | filter: filter1 | filter: filter2 | filter:filter3">
+			<table>
+				<tr><td>
+						<img src="{{x.ITEM_IMAGE_PATH}}"  class="img-rounded" width="204" height="136">
+				</td></tr>
+				<tr><td style="padding: 21px"><p>{{x.ITEM_DESC}}</p></td></tr>
+			</table>
+		</div>
+	</div>
+</div>
+<!-- <div class="loadPage">
 	<img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTwhHpWaIkkj11xQ-bvhvraGfO-9tzDkVDqLAjVZDtkBHay0ox_">
 	<h1>Page 1</h1>
 	<input type="text" name="firstName" ng-model="firstName">
 	<br>
 	<p>{{firstName}}</p>
-</div>
+</div> -->

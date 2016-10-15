@@ -4,9 +4,24 @@
 }
 </style>
 <div class="loadPage">
-	<img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQfoII5Xmi4z_oIPBAZsDqb4Qvd7Un7bRtaQfFIQT7E1QMcAQ-u">
+	<div class="form-group col-md-4">
+		<label for="usr">Filter 1:</label>
+	  	<input type="text" class="form-control" id="usr" ng-model="firstInput" name="firstInput">
+	</div>
+	<div class="form-group col-md-4">
+	  <label for="pwd">Filter 2:</label>
+	  <input type="text" class="form-control" id="pwd" ng-model="secondInput" name="secondInput">
+	</div>
+	<div class="form-group col-md-4">
+	  <label for="pwd">Filter 3:</label>
+	  <input type="text" class="form-control" id="pwd" ng-model="thirdInput" name="thirdInput">
+	</div>
+	<div class="col-md-4">
+		<h4>{{outPutfunction()}}</h4>
+	</div>
+	<!-- <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQfoII5Xmi4z_oIPBAZsDqb4Qvd7Un7bRtaQfFIQT7E1QMcAQ-u">
 	<h1>Page 2</h1>
 	<input type="text" name="lastName" ng-model="lastName">
 	<br>
-	<p>{{firstName + lastName}}</p>
+	<p>{{firstName + lastName}}</p> -->
 </div>

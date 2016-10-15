@@ -29,10 +29,19 @@ angular.module('shop', ['ngAnimate','ui.router'])
 .controller('home_Ctrl', function($scope, $timeout, $controller) {
     
 })
-.controller('page_1_Ctrl', function($scope, $timeout, $controller) {
+.controller('page_1_Ctrl', function($scope, $timeout, $controller,$http) {
     $scope.firstName="Manivannan";
     // $controller('home_Ctrl',{$scope:$scope});
-    $scope.firstName=[{'itemName':'','itemDesctpion'}]
+    $http({
+        method : "json",
+        url : "data.json"
+    }).then(function mySucces(response) {
+        console.log(response);
+        // $scope.myWelcome = response.data;
+    }, function myError(response) {
+        console.log(response);
+        // $scope.myWelcome = response.statusText;
+    });
 })
 .controller('page_2_Ctrl', function($scope, $timeout, $controller) {
     $scope.lastName="A";
